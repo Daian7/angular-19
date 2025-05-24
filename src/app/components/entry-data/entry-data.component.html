@@ -1,0 +1,11 @@
+
+<!-- Two Way Data Binding -->
+<!-- Sem diretiva -->
+<input type="text" [value]="placeholder" (input)="placeholder = $any($event.target).value"/>
+<p>{{placeholder}}</p>
+
+<!-- Com Diretiva do Angular -->
+<input type="text"
+[(ngModel)]="placepass"
+/>
+<p [style.color]="placepass">{{placepass}}</p>

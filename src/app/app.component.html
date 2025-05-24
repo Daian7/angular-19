@@ -227,6 +227,18 @@
       </svg>
       <h1>Hello, {{ title }}</h1>
       <p>Parabéns palhaço! Your app is running. 🎉</p>
+
+		<!-- Data Biding: Associação de dados -->
+			<!-- Interpoção -->
+			<app-menu label="{{buttonName}}"></app-menu>
+			<app-menu label="Nome do Botão"></app-menu>
+
+			<!-- Property Binding -->
+			<app-menu [label]="buttonName"></app-menu>
+			<app-menu [label]="'Nome do Botão'"></app-menu>
+
+			<!-- Two Way Data Binding -->
+			<app-entry-data></app-entry-data>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
