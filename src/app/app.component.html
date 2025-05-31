@@ -13,8 +13,19 @@
 <!-- Two Way Data Binding -->
 <app-entry-data></app-entry-data>
 
-<app-title name="calculadora" *ngIf="isAlive"></app-title>
+<app-title name="calculadora" *ngIf="isAlive; else anotherBlock"></app-title>
 
 <button (click)="dispose()">Fenix</button>
+
+<ng-template #anotherBlock>
+	<p>Olá eu sou um bloco secreto</p>
+</ng-template>
+
+<br>
+
+<app-card>
+	<h2>Testando ng-content</h2>
+	<p>ng-content Eu vim de fora</p>
+</app-card>
 
 

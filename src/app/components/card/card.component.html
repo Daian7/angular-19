@@ -1,0 +1,48 @@
+<p>card component for learn directives</p>
+
+<ng-content select="p"></ng-content>
+
+<ul>
+	<li *ngFor="let p of produtos; let i = index" (click)="removerIndex(i)">
+		{{ i }} - {{ p }}
+	</li>
+	<button (click)="adicionar()">Adicionar</button>
+	<button (click)="remover()">Remover</button>
+</ul>
+
+<br>
+
+<div [ngSwitch]="menuType" [ngClass]="estilo">
+	User <input type="text" [(ngModel)]="menuType">
+	Estilo <input type="text" [(ngModel)]="estilo">
+	<div *ngSwitchDefault>
+		<ul>
+			<li>inicio</li>
+		</ul>
+	</div>
+	<div *ngSwitchCase="'user'">
+		<ul>
+			<li>inicio</li>
+			<li>vendas</li>
+		</ul>
+	</div>
+	<div *ngSwitchCase="'adm'">
+		<ul>
+			<li>inicio</li>
+			<li>vendas</li>
+			<li>gerenciar users</li>
+		</ul>
+	</div>
+	<div *ngSwitchCase="'superuser'">
+		<ul>
+			<li>inicio</li>
+			<li>vendas</li>
+			<li>gerenciar users</li>
+			<li>gerenciar adm</li>
+		</ul>
+	</div>
+</div>
+
+<p [ngStyle]="{'background':corFundo, 'color': corFonte}">Testando NGStyle</p>
+
+<ng-content select="h2"></ng-content>

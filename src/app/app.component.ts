@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { MenuComponent } from './components/menu.component';
+import { MenuComponent } from './components/menu/menu.component';
 import { EntryDataComponent } from './components/entry-data/entry-data.component';
 import { FormsModule } from '@angular/forms';
-import { TitleComponent } from './title/title.component';
+import { TitleComponent } from './components/title/title.component';
 import { CommonModule } from '@angular/common';
+import { CardComponent } from './components/card/card.component';
 
 @Component({
   selector: 'app-root',
-  imports: [MenuComponent, EntryDataComponent, FormsModule, TitleComponent, CommonModule],
+  imports: [MenuComponent, EntryDataComponent, FormsModule, TitleComponent, CommonModule, CardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
